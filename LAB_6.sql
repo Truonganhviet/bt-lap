@@ -9,7 +9,7 @@ AS
    END;
 SELECT * FROM NHANVIEN
 INSERT INTO [dbo].[NHANVIEN] ([HONV],[TENLOT],[TENNV],[MANV],[NGSINH],[DCHI],[PHAI],[LUONG],[MA_NQL],[PHG])
-VALUES(N'Bui',N'Quang',N'Huy','098','09-13-2020','Le Duan - HCM','Nam',6000,'005',1)
+VALUES(N'Ba',N'Quan',N'Huy','098','09-13-2020','Le Duan - HCM','Nam',6000,'005',1)
 GO
 --cau 1b
 CREATE TRIGGER trg_CheckValidAge
@@ -25,7 +25,7 @@ AS
    END
 ---kiểm tra câu lệnh
 INSERT INTO [dbo].[NHANVIEN] ([HONV],[TENLOT],[TENNV] ,[MANV] ,[NGSINH],[DCHI],[PHAI],[LUONG],[MA_NQL],[PHG])
-     VALUES(N'Bui',N'Duc',N'Danh','098','09-13-2020','Le Duan - HCM','Nam',90000,'005',1)
+     VALUES(N'Hui',N'Dai',Oanh','098','09-13-2020','Le Duan - HCM','Nam',90000,'005',1)
 GO
 ---câu 1c
 CREATE TRIGGER trg_CheckUpdateOnAddress
@@ -106,4 +106,4 @@ BEGIN
 INSERT INTO PHANCONG VALUES((SELECT MANV FROM INSERTED),1,1,100)
 END
 INSERT INTO NHANVIEN
-VALUES('Bui','Duc','Danh','098','09-13-2020','Le Duan - HCM','Nam',90000,'005',1)
+VALUES('Bao','Dat','Dan','098','09-13-2020','Le Duan - HCM','Nam',90000,'005',1)
